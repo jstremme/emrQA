@@ -12,7 +12,7 @@ args = parser.parse_args()
 
 ###################################################### SET FILE PATHS ##################################################################
 
-templates_file = os.path.join(args.templates_dir, 'templates-all.csv')
+templates_file = args.templates_dir
 i2b2_file_paths = args.i2b2_dir
 
 ql_output = os.path.join(args.output_dir,"smoking-ql.csv")
