@@ -10,7 +10,7 @@ PYTHON = sys.executable
 i2b2_relations_challenge_directory = "i2b2/relations/"
 i2b2_medications_challenge_directory = "i2b2/medication/"
 i2b2_heart_disease_risk_challenge_directory = "i2b2/heart-disease-risk/"
-i2b2_obesity_challenge_directory = "i2b2/obesity/"
+# i2b2_obesity_challenge_directory = "i2b2/obesity/"
 i2b2_smoking_challenge_directory = "i2b2/smoking/"
 i2b2_coreference_challeneg_directory = "i2b2/coreference"
 
@@ -72,9 +72,9 @@ print(cmd)
 check_call(cmd, shell=True)
 
 
-cmd = "{python} generation/i2b2_obesity/obesity-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_obesity_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
-print(cmd)
-check_call(cmd, shell=True)
+# cmd = "{python} generation/i2b2_obesity/obesity-answers.py --i2b2_dir={i2b2_dir} --templates_dir={templates_dir} --output_dir={output_dir}".format(python=PYTHON, i2b2_dir=i2b2_obesity_challenge_directory, templates_dir=templates_directory, output_dir=output_directory)
+# print(cmd)
+# check_call(cmd, shell=True)
 
 ##################  combine all the output files and generate the output in normal format ####################
 

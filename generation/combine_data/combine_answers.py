@@ -15,12 +15,12 @@ medications = json.load(open(os.path.join(args.output_dir,"medication-qa.json"))
 relations = json.load(open(os.path.join(args.output_dir,"relations-qa.json")), encoding="latin-1")
 risk = json.load(open(os.path.join(args.output_dir,"risk-qa.json")))
 smoking = json.load(open(os.path.join(args.output_dir,"smoking-qa.json")))
-obesity = json.load(open(os.path.join(args.output_dir,"obesity-qa.json")))
+# obesity = json.load(open(os.path.join(args.output_dir,"obesity-qa.json")))
 
 
 ######################################################## CODE #########################################################################
 
-data = [medications, relations, risk, smoking, obesity]
+data = [medications, relations, risk, smoking] #, obesity]
 #data = [relations]
 data_out = {"data": data}
 json_out = os.path.join(args.output_dir,"data.json")
@@ -84,9 +84,9 @@ medications = os.path.join(args.output_dir,"medication-ql.csv")
 relations = os.path.join(args.output_dir,"relations-ql.csv")
 risk = os.path.join(args.output_dir,"risk-ql.csv")
 smoking = os.path.join(args.output_dir,"smoking-ql.csv")
-obesity = os.path.join(args.output_dir,"obesity-ql.csv")
+# obesity = os.path.join(args.output_dir,"obesity-ql.csv")
 
-data = [medications, relations, risk, smoking, obesity]
+data = [medications, relations, risk, smoking] #, obesity]
 
 unique = set()
 
@@ -217,7 +217,7 @@ for article in data["data"]:
                 if 'answers' in qa:
                     output['answers'].append(qa['answers'])
                     #print(qa['answers'])
-                    
+
 json_out = "data_squad_format.json"
 with open(json_out, 'w') as outfile:
     json.dump(data, outfile,  encoding="utf-8")

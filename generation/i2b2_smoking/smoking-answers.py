@@ -4,7 +4,7 @@ import json
 import argparse
 import os
 parser = argparse.ArgumentParser()
-parser.add_argument('--i2b2_dir', default='', help='Directory containing i2b2 smoking challange files')
+parser.add_argument('--i2b2_dir', default='', help='Directory containing i2b2 smoking challenge files')
 parser.add_argument('--templates_dir', default='', help='Directory containing template files in the given format')
 parser.add_argument('--output_dir', default='', help='Directory to store the output')
 args = parser.parse_args()
@@ -26,7 +26,7 @@ def ReadFile():
 
     status = []
     for file_name in file_names:
-        file = file_path + file_name
+        file = os.path.join(file_path, file_name)
         with open(file) as fd:
             XML = xmltodict.parse(fd.read())
             idx = 0
